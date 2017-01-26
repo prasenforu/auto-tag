@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
-  "Description" : "Auto Tag (Open Source by GorillaStack)",
+  "Description" : "Auto Tagging AWS Resources",
   "Parameters" : {
     "CodeS3Bucket" : {
       "Description" : "The name of the code bucket in S3",
@@ -15,7 +15,7 @@
     "CloudTrailBucketName" : {
       "Description" : "The name you want to give the bucket for your CloudTrail logs",
       "Type" : "String",
-      "Default": "my-cloudtrail-bucket"
+      "Default": "karp-cloudtrail-bucket"
     }
   },
 
@@ -53,7 +53,7 @@
           "S3Bucket": { "Ref" : "CodeS3Bucket" },
           "S3Key": { "Ref" : "CodeS3Path" }
         },
-        "Description" : "Auto Tag (Open Source by GorillaStack)",
+        "Description" : "Auto Tagging AWS Resources",
         "FunctionName" : "AutoTag",
         "Handler" : "autotag.handler",
         "Role" : { "Fn::GetAtt" : [ "AutoTagExecutionRole", "Arn" ] },
