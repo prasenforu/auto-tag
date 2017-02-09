@@ -10,6 +10,8 @@ This is an open-source tagging solution for AWS.  Deploy auto tag to lambda and 
 
 Automatically tagging resources can greatly improve the ease of cost allocation and governance.
 
+![Alt text](https://github.com/prasenforu/aws-elk-billing/blob/master/screenshots/kibana-dashboard.png "Overview") 
+
 Within 5-7 minutes of creating a supported resource type, CloudTrail will write to s3 logs, which triggers our AutoTag code to tag the resource with the ARN of it's creator.
 
 ### Installation
